@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector>
+#include <algorithm> // for sort()
+
+int main() {
+    // Create a vector of integers
+    std::vector<int> numbers = {42, 12, 8, 63, 15, 27};
+
+    // Sort the vector in ascending order
+    std::sort(numbers.begin(), numbers.end());
+
+    std::cout << "Sorted in ascending order: ";
+    for (int num : numbers) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    // Sort the vector in descending order
+    std::sort(numbers.begin(), numbers.end(), std::greater<int>());
+
+    std::cout << "Sorted in descending order: ";
+    for (int num : numbers) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
